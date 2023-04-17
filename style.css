@@ -23,10 +23,10 @@ html
 /* Variables */
 :root
 {
-    --color__texto-primaria: #fff;
-    --color__texto-secundario: #230443;
-    --color__texto-terciario: #0f0f0f;
-    --color__texto-hover1: #fafafa30;
+    --color__primario: #fff;
+    --color__secundario: #230443;
+    --color__terciario: #0f0f0f;
+    --color__hover: #fafafa30;
     --border-radius: 5px;
     --effect-glass: blur(0.4rem);
 }
@@ -37,12 +37,15 @@ html
 /* Cabecera y barra de navegación */
 header
 {
-    box-shadow: 1px 1px 10px #0f0f0f;
-    background: #0f0f0f;
     height: 40px;
     width: 100%;
     position: fixed;
     z-index: 1000;
+}
+header.sticky
+{
+    box-shadow: 1px 1px 10px var(--color__terciario);
+    background: var(--color__terciario);
 }
 .header__container
 {
@@ -59,26 +62,25 @@ header
 }
 .header__container-logo h2
 {
-    color: var(--color__texto-primaria);
+    color: var(--color__primario);
     font-size: 27px;
     line-height: 1;
 }
 .header__container-nav ul li a
 {   
     text-decoration: none;
-    color: var(--color__texto-primaria);
+    color: var(--color__primario);
     font-size: 13px;
     padding: 7px 12px;
     margin: 4px;
 }
 .header__container-nav ul li a:hover
 {
-    color: var(--color__texto-primaria);
-    /* background: var(--color__texto-hover1); */
+    color: var(--color__primario);
     backdrop-filter: var(--effect-glass);
     border-radius: var(--border-radius);
-    background: var(--color__texto-hover1);
-    box-shadow: 0px 0px 10px var(--color__texto-hover1);
+    background: var(--color__hover);
+    box-shadow: 0px 0px 10px var(--color__hover);
 }
 .header__container-nav ul li
 {
@@ -92,10 +94,9 @@ header
 /* Home */
 .home
 {
-    /* background: #1b003a; */
     width: 100%;
     height: 100vh;
-    background-image: url(game-programming-03.jpg);
+    background-image: url(imgs/game-programming-03.jpg);
     position: relative;
 
 }
@@ -119,7 +120,7 @@ header
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--color__texto-primaria);
+    color: var(--color__primario);
     gap: 10px;
 }
 .home__container h2
@@ -159,34 +160,33 @@ header
     justify-content: center;
     width: 130px;
     height: 40px;
-    background: var(--color__texto-secundario);
+    background: var(--color__secundario);
     text-decoration: none;
-    color: var(--color__texto-primaria);
+    color: var(--color__primario);
     font-size: 14px;
     font-weight: 400;
+    box-shadow: 0px 0px 10px var(--color__secundario);
 }
 .home__container-buttons a:hover
 {
-    color: var(--color__texto-primaria);
-    /* background: var(--color__texto-hover1); */
+    color: var(--color__primario);
     backdrop-filter: var(--effect-glass);
     border-radius: var(--border-radius);
-    background: var(--color__texto-hover1);
-    box-shadow: 0px 0px 10px var(--color__texto-hover1);
+    background: var(--color__hover);
+    box-shadow: 0px 0px 10px var(--color__hover);
 }
 .home__container-buttons span a
 {
-    color: var(--color__texto-primaria);
-    /* background: var(--color__texto-hover1); */
+    color: var(--color__primario);
     backdrop-filter: var(--effect-glass);
-    background: var(--color__texto-hover1);
-    box-shadow: 0px 0px 10px var(--color__texto-hover1);
+    background: var(--color__hover);
+    box-shadow: 0px 0px 10px var(--color__hover);
 }
 .home__container-buttons span a:hover
 {
-    color: var(--color__texto-primaria);
-    background: var(--color__texto-secundario);
-    box-shadow: 1px 1px 10px var(--color__texto-secundario);
+    color: var(--color__primario);
+    background: var(--color__secundario);
+    box-shadow: 1px 1px 10px var(--color__secundario);
     border-radius: var(--border-radius);
 }
 .home__container-section
@@ -226,7 +226,7 @@ header
     align-content: center;
     align-items: center;
     justify-content: center;
-    color: var(--color__texto-primaria);
+    color: var(--color__terciario);
     gap: 40px;
     flex-wrap: wrap;
 }
@@ -234,21 +234,21 @@ header
 {   
     width: 320px;
     height: 440px;
-    background-color: var(--color__texto-secundario);
+    background-color: var(--color__secundario);
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 1px 1px 10px var(--color__texto-secundario);
+    box-shadow: 1px 1px 10px var(--color__secundario);
 }
 .about__container-photo-photo
 {
     cursor: pointer;
     height: 80%;
     width: 80%;
-    background: var(--color__texto-hover1);
+    background: var(--color__hover);
     backdrop-filter: var(--effect-glass);
-    box-shadow: 0px 0px 10px var(--color__texto-hover1);
+    box-shadow: 0px 0px 10px var(--color__hover);
 }
 .about__container-about_me
 {
@@ -257,11 +257,10 @@ header
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: var(--color__texto-terciario);
 }
 .about__container-about_me-me
 {
-    background: var(--color__texto-hover1);
+    background: var(--color__hover);
     width: 560px;
     height: 190px;
     padding: 35px;
@@ -278,7 +277,7 @@ header
 }
 .about__container-personal_info h3
 {
-    color: var(--color__texto-secundario);
+    color: var(--color__secundario);
     margin: 10px;
     font-size: 17px;
 }
@@ -289,7 +288,7 @@ header
 }
 .about__container-personal_info span
 {
-    color: var(--color__texto-secundario);
+    color: var(--color__secundario);
     font-weight: 600;
 }
 .about__container-section
