@@ -302,3 +302,39 @@ header.sticky
     font-weight: 400;
     color: var(--color__texto-terciario);
 }
+
+
+
+
+/* Skills & Works */
+.skills-works
+{
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+
+/* Services */
+.services
+{
+    background: #f6f6f6;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+
+/* Contact */
+.contact
+{
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
