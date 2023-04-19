@@ -34,7 +34,26 @@ html
 
 
 
-
+/* Same selectors */
+.home__container-section,
+.about__container-section,
+.skills-works_container-section,
+.services_container-section,
+.contact_container-section
+{
+    position: absolute;
+    right: 20px;
+    text-align: center;
+}
+.home__container-section h2,
+.about__container-section h2,
+.skills-works_container-section h2,
+.services_container-section h2,
+.contact_container-section h2
+{
+    font-size: 14px !important;
+    font-weight: 400;
+}
 
 
 
