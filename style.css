@@ -34,6 +34,31 @@ html
 
 
 
+/* Same selectors */
+.home__container-section,
+.about__container-section,
+.skills-works_container-section,
+.services_container-section,
+.contact_container-section
+{
+    position: absolute;
+    right: 20px;
+    text-align: center;
+}
+.home__container-section h2,
+.about__container-section h2,
+.skills-works_container-section h2,
+.services_container-section h2,
+.contact_container-section h2
+{
+    font-size: 14px !important;
+    font-weight: 400;
+}
+
+
+
+
+
 /* Cabecera y barra de navegación */
 header
 {
@@ -189,16 +214,6 @@ header.sticky
     box-shadow: 1px 1px 10px var(--color__secundario);
     border-radius: var(--border-radius);
 }
-.home__container-section
-{
-    position: absolute;
-    right: 20px;
-}
-.home__container-section h2
-{
-    font-size: 18px;
-    font-weight: 400;
-}
 
 
 
@@ -291,17 +306,6 @@ header.sticky
     color: var(--color__secundario);
     font-weight: 600;
 }
-.about__container-section
-{
-    position: absolute;
-    right: 20px;
-}
-.about__container-section h2
-{
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--color__texto-terciario);
-}
 
 
 
@@ -313,6 +317,25 @@ header.sticky
     width: 100%;
     height: 100vh;
     position: relative;
+}
+.skills-works_container
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--color__terciario);
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 
@@ -326,6 +349,25 @@ header.sticky
     height: 100vh;
     position: relative;
 }
+.services_container
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--color__terciario);
+    gap: 40px;
+    flex-wrap: wrap;
+}
 
 
 
@@ -337,4 +379,23 @@ header.sticky
     width: 100%;
     height: 100vh;
     position: relative;
+}
+.contact_container
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--color__terciario);
+    gap: 40px;
+    flex-wrap: wrap;
 }
