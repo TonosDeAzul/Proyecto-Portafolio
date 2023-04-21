@@ -14,7 +14,9 @@ html
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    transition: all 150ms ease;
+    transition: all 120ms ease;
+    font-size: 13.4px;
+    font-weight: 300;
 }
 
 
@@ -29,6 +31,7 @@ html
     --color__hover: #fafafa30;
     --border-radius: 5px;
     --effect-glass: blur(0.4rem);
+    --font-size__secundario: 21px;
 }
 
 
@@ -45,16 +48,6 @@ html
     right: 20px;
     text-align: center;
 }
-.home__container-section h2,
-.about__container-section h2,
-.skills-works_container-section h2,
-.services_container-section h2,
-.contact_container-section h2
-{
-    font-size: 14px !important;
-    font-weight: 400;
-}
-
 
 
 
@@ -90,6 +83,7 @@ header.sticky
     color: var(--color__primario);
     font-size: 27px;
     line-height: 1;
+    font-weight: 600;
 }
 .header__container-nav ul li a
 {   
@@ -151,8 +145,7 @@ header.sticky
 .home__container h2
 {
     line-height: 1;
-    font-size: 22px;
-    font-weight: 400;
+    font-size: var(--font-size__secundario);
 }
 .home__container h1
 {
@@ -166,11 +159,10 @@ header.sticky
     display: flex;
     justify-content: space-evenly;
 }
-.home__container-skills h3
+/* .home__container-skills h3
 {
-    font-size: 14px;
-    font-weight: 400;
-}
+    font-size: var(--font-size__primario);
+} */
 .home__container-buttons
 {
     width: 350px;
@@ -188,8 +180,6 @@ header.sticky
     background: var(--color__secundario);
     text-decoration: none;
     color: var(--color__primario);
-    font-size: 14px;
-    font-weight: 400;
     box-shadow: 0px 0px 10px var(--color__secundario);
 }
 .home__container-buttons a:hover
@@ -265,6 +255,10 @@ header.sticky
     backdrop-filter: var(--effect-glass);
     box-shadow: 0px 0px 10px var(--color__hover);
 }
+.about__container-photo-photo:hover
+{
+    transform: scale(1.02);
+}
 .about__container-about_me
 {
     height: 450px;
@@ -282,10 +276,6 @@ header.sticky
     border-radius: var(--border-radius);
     box-shadow: 0px 0px 10px #0f0f0f10;
 }
-.about__container-about_me-me p
-{
-    font-size: 14px;
-}
 .about__container-personal_info
 {
     text-align: center;
@@ -294,12 +284,12 @@ header.sticky
 {
     color: var(--color__secundario);
     margin: 10px;
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: 700;
 }
 .about__container-personal_info p
 {
     padding: 3px;
-    font-size: 13px;
 }
 .about__container-personal_info span
 {
@@ -359,25 +349,34 @@ header.sticky
     margin: auto;
     width: 100%;
     height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
     color: var(--color__terciario);
-    gap: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.services_container-info p
+{
+    font-weight: 600;
+}
+.services_container-card
+{
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 40px;
 }
 .services_container-card_1
 {
-    width: 350px;
-    height: 600px;
+    width: 280px;
+    height: 440px;
     background: var(--color__secundario);
     color: var(--color__primario);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 130px;
+    gap: 35px;
     flex-direction: column;
     border-radius: var(--border-radius);
     text-align: center;
@@ -388,6 +387,7 @@ header.sticky
     color: var(--color__terciario);
     background: var(--color__hover);
     box-shadow: 0px 0px 10px #0f0f0f10;
+    transform: scale(1.02);
 }
 .services_container-card_1:hover a
 {
@@ -406,26 +406,38 @@ header.sticky
     backdrop-filter: var(--effect-glass);
     box-shadow: 0px 0px 10px var(--color__hover);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services_container-card-icon img
+{
+    filter: invert(1);
+    width: 40px;
 }
 .services_container-card-info
 {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     flex-direction: column;
 }
 .services_container-card-info p
 {
-    font-size: 14px;
-    padding: 0 30px 30px 30px;
+    padding: 0 22px 22px 22px;
+}
+.services_container-card-info h2
+{
+    font-weight: 600;
+    font-size: var(--font-size__secundario);
 }
 .services_container-card_1 a
 {
     text-decoration: none;
     color: var(--color__primario);
-    padding: 20px;
+    padding: 16px;
     background: var(--color__hover);
     backdrop-filter: var(--effect-glass);
     box-shadow: 0px 0px 10px var(--color__hover);
@@ -441,14 +453,14 @@ header.sticky
 
 .services_container-card_2
 {
-    width: 350px;
-    height: 600px;
+    width: 280px;
+    height: 440px;
     background: var(--color__hover);
     color: var(--color__terciario);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 130px;
+    gap: 35px;
     flex-direction: column;
     border-radius: var(--border-radius);
     text-align: center;
@@ -458,12 +470,13 @@ header.sticky
 {
     color: var(--color__primario);
     background: var(--color__secundario);
-    box-shadow: 0px 0px 10px #0f0f0f10;
+    box-shadow: 0px 0px 10px var(--color__secundario);
+    transform: scale(1.02);
 }
 .services_container-card_2:hover a
 {
     color: var(--color__primario);
-    box-shadow: 0px 0px 10px var(--color__hover);
+    box-shadow: 0px 0px 10px #fafafa12;
 }
 .services_container-card_2:hover .services_container-card-icon_2
 {
@@ -477,14 +490,22 @@ header.sticky
     background: var(--color__secundario);
     box-shadow: 0px 0px 10px var(--color__secundario);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services_container-card-icon_2 img
+{
+    filter: invert(1);
+    width: 40px;
 }
 .services_container-card_2 a
 {
     text-decoration: none;
     color: var(--color__primario);
-    padding: 20px;
+    padding: 16px;
     background: var(--color__secundario);
     backdrop-filter: var(--effect-glass);
     box-shadow: 0px 0px 10px var(--color__secundario);
