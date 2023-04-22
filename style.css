@@ -29,9 +29,9 @@ html
     --color__secundario: #230443;
     --color__terciario: #0f0f0f;
     --color__hover: #fafafa30;
-    --border-radius: 5px;
+    --border-radius: 8px;
     --effect-glass: blur(0.4rem);
-    --font-size__secundario: 21px;
+    --font-size__secundario: 20px;
 }
 
 
@@ -301,7 +301,7 @@ header.sticky
 
 
 /* Skills & Works */
-.skills-works
+/* .skills-works
 {
     background: #fff;
     width: 100%;
@@ -326,7 +326,7 @@ header.sticky
     color: var(--color__terciario);
     gap: 40px;
     flex-wrap: wrap;
-}
+} */
 
 
 
@@ -541,11 +541,126 @@ header.sticky
     width: 100%;
     height: 80%;
     display: flex;
-    flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: center;
     color: var(--color__terciario);
-    gap: 40px;
     flex-wrap: wrap;
+}
+.contact_container-info
+{
+    width: 280px;
+    height: 500px;
+    background: var(--color__secundario);
+    color: var(--color__primario);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 7px 0px 0px 7px;
+    box-shadow: 1px 1px 10px var(--color__secundario);
+    flex-wrap: wrap;
+}
+.contact_container-info > div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact_container-info div h2
+{
+    font-size: var(--font-size__secundario);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.contact_container-info-more
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 30px;
+}
+.contact_container-info-more span
+{
+    font-weight: 600;
+}
+.contact_container-info-more div
+{
+    display: flex;
+    text-align: start;
+    gap: 20px;
+
+}
+.contact_container-info-more-icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    background-color: var(--color__primario);
+    border-radius: 50%;
+}
+.contact_container-info-more-icon i
+{
+    font-size: 15px;
+    color: var(--color__secundario);
+}
+.contact_container-info-more-icon div
+{
+    width: 15px;
+    height: 15px;
+    background: var(--color__secundario);
+    border-radius: 50%;
+}
+.contact_container-form
+{
+    width: 560px;
+    height:500px;
+    background: var(--color__hover);
+    color: var(--color__terciario);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 0px 7px 7px 0px;
+    text-align: center;
+    box-shadow: 1px 1px 10px #0f0f0f10;
+}
+.contact_container-form h2
+{
+    display: flex;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--font-size__secundario);
+}
+.contact_container-form-user
+{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact_container-form-user-data
+{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.contact_container-form-user-data label
+{
+    font-weight: 600;
+}
+.contact_container-form-user-data input,
+.contact_container-form-user-data textarea
+{
+    border: none;
+    border-bottom: 2px solid var(--color__terciario);
+    padding: 6px 6px;
+    margin-top: 10px;
+    color: #0f0f0f;
+}
+.contact_container-form-user-data input:focus,
+.contact_container-form-user-data textarea:focus
+{
+    outline: none;
 }
